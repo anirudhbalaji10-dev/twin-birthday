@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Your CSS file -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="page-center">
+
+    <p class="small-line">The End of the Journey</p>
+
+    <h1>Two Hearts. One Beautiful Story ✨</h1>
+
+    <p class="wish-text">
+        May your smiles stay bright, your bond grow stronger,
+        and your memories shine forever.
+    </p>
+
+    <p style="opacity:0.7; margin-top:25px;">Made with ❤️</p>
+
+</div>
+
+<div class="final-stars" id="finalStars"></div>
+<div id="secretMessage" class="secret-message">
+    🌌 You found the secret…  
+    Wishing both of you endless happiness & unforgettable memories 💖
+</div>
+
+<script>
+const stars = document.getElementById("finalStars");
+
+for(let i=0;i<60;i++){
+    const s = document.createElement("div");
+    s.classList.add("final-star");
+
+    s.style.left = Math.random()*100 + "vw";
+    s.style.top = Math.random()*100 + "vh";
+    s.style.animationDelay = Math.random()*4 + "s";
+
+    stars.appendChild(s);
+}
+</script>
+<script>
+document.body.addEventListener("click", (e)=>{
+
+    for(let i=0;i<12;i++){
+
+        const heart = document.createElement("div");
+        heart.classList.add("spark");
+
+        heart.style.left =
+            (e.clientX - 30 + Math.random()*60) + "px";
+
+        heart.style.top =
+            (e.clientY - 30 + Math.random()*60) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },3000);
+    }
+
+});
+</script>
+<script>
+let tapCount = 0;
+let tapTimer;
+
+const secret = document.getElementById("secretMessage");
+
+document.body.addEventListener("click", ()=>{
+
+    tapCount++;
+
+    clearTimeout(tapTimer);
+
+    tapTimer = setTimeout(()=>{
+        tapCount = 0;
+    },1000);
+
+    if(tapCount >= 5){
+        secret.classList.add("show");
+
+        setTimeout(()=>{
+            secret.classList.remove("show");
+        },4000);
+
+        tapCount = 0;
+    }
+});
+</script>
+</body>
+
+</html>
