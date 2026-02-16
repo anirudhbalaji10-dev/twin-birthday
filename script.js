@@ -1,3 +1,5 @@
+console.log("NEW VERSION LOADED");
+
 const pairs = [
     ["1L.jpeg","1R.jpeg"],
     ["2L.jpeg","2R.jpeg"],
@@ -200,4 +202,5 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
