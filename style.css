@@ -593,3 +593,20 @@ h1, h2{
         transform:translateY(-20px) scale(1.6);
     }
 }
+/* MOBILE TITLE FIX */
+@media (max-width: 768px){
+
+    .title-text,
+    .intro h1{
+        font-size: 42px !important;
+        line-height: 1.2;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    .small-line{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
