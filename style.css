@@ -622,5 +622,45 @@ h1, h2{
         letter-spacing: 1px;
     }
 }
+/* ===== MOBILE FINAL FIX ===== */
+@media (max-width: 768px){
+
+  /* TITLE PAGE */
+  h1{
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+    text-align: center;
+    padding: 0 14px;
+  }
+
+  .small-line{
+    font-size: 13px !important;
+    letter-spacing: 1px;
+  }
+
+  /* PHOTO PAGE */
+  .photo-page h2{
+    font-size: 1.8rem !important;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .photo-container{
+    height: 75vh !important;
+  }
+
+  .photo{
+    width: 44vw !important;
+    height: 55vh !important;
+    max-width: none !important;
+    border-radius: 18px;
+    object-fit: cover;
+  }
+
+  .show-left{ left: 3% !important; }
+  .show-right{ right: 3% !important; }
+}
+
 
 
