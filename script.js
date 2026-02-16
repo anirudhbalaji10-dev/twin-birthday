@@ -1,12 +1,12 @@
 const pairs = [
-    ["images/1L.jpeg","images/1R.jpeg"],
-    ["images/2L.jpeg","images/2R.jpeg"],
-    ["images/3L.jpeg","images/3R.jpeg"],
-    ["images/4L.jpeg","images/4R.jpeg"],
-    ["images/5L.jpeg","images/5R.jpeg"],
-    ["images/6L.jpeg","images/6R.jpeg"],
-    ["images/7L.jpeg","images/7R.jpeg"],
-    ["images/8L.jpeg","images/8R.jpeg"]
+    ["1L.jpeg","1R.jpeg"],
+    ["2L.jpeg","2R.jpeg"],
+    ["3L.jpeg","3R.jpeg"],
+    ["4L.jpeg","4R.jpeg"],
+    ["5L.jpeg","5R.jpeg"],
+    ["6L.jpeg","6R.jpeg"],
+    ["7L.jpeg","7R.jpeg"],
+    ["8L.jpeg","8R.jpeg"]
 ];
 
 let index = 0;
@@ -200,3 +200,4 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
