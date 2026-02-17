@@ -606,28 +606,28 @@ h1, h2{
         transform:translateY(-20px) scale(1.6);
     }
 }
-/* ===== MOBILE TITLE FIX (BIG TEXT) ===== */
+/* ===== FULL SCREEN MOBILE TITLE ===== */
 @media (max-width:768px){
 
   .title-screen{
+      position:relative;
+      width:100vw;
+      height:100vh;
+      overflow:hidden;
       display:flex;
       justify-content:center;
       align-items:center;
-      height:100vh;
   }
 
   .title-svg{
-      width:100vw !important;   /* use full phone width */
-      height:70vh !important;
+      width:100vw !important;
+      height:100vh !important;
+      display:block;
   }
 
   .birthday-text{
-      font-size:120px !important;   /* BIG */
-      stroke-width:2.2;
+      font-size:170px !important;   /* FULL SCREEN SIZE */
+      stroke-width:2.3;
   }
 
 }
-
-
-
-
