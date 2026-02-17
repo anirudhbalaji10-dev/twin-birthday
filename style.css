@@ -228,21 +228,27 @@ background: rgba(0,0,0,0.25);
         align-items:center;
         gap:14px;
     }
-
-    .photo{
+.photo{
     position:relative !important;
+
     width:90vw !important;
-    height:34vh !important;
+    max-width:420px;
+
+    height:auto !important;          /* ⭐ auto height */
+    aspect-ratio: 3 / 4;              /* clean card ratio */
 
     top:auto !important;
     left:auto !important;
     right:auto !important;
 
-    transform:none !important;
-    opacity:1 !important;
+    object-fit:cover;                 /* ⭐ back to cinematic */
+    border-radius:18px;
 
-    object-fit: contain;              /* ⭐ FIX */
-    background: rgba(0,0,0,0.25);     /* ⭐ CLEAN LOOK */
+    box-shadow:
+      0 15px 30px rgba(0,0,0,0.45),
+      0 0 18px rgba(255,140,220,0.25);
+    
+    opacity:1 !important;
 }
 
     .show-left,
@@ -629,5 +635,6 @@ background: rgba(0,0,0,0.25);
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
