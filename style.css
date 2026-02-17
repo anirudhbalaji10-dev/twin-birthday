@@ -417,13 +417,18 @@ h1, h2{
 @keyframes writeText{
     to{ stroke-dashoffset:0; }
 }
+/* ===== MOBILE TITLE PERFECT FIT ===== */
+@media (max-width:768px){
 
-/* mobile */
-@media(max-width:768px){
-    .birthday-text{
-        font-size:52px;
-        stroke-width:1.5;
-    }
+  .title-svg{
+      width:100vw;
+      height:100vh;
+  }
+
+  .birthday-text{
+      font-size:145px;   /* BIG but clean */
+  }
+
 }
 
 /* stardust burst */
@@ -631,3 +636,4 @@ h1, h2{
   }
 
 }
+
