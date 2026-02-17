@@ -232,6 +232,7 @@ background: rgba(0,0,0,0.25);
         height:34vh !important;
 
         object-fit:contain;
+        background:#000;
         background:rgba(255,255,255,0.03);
 
         top:auto !important;
@@ -628,6 +629,7 @@ background: rgba(0,0,0,0.25);
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
