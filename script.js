@@ -147,17 +147,10 @@ function showPair(i){
         leftPhoto.src = pairs[i][0];
         rightPhoto.src = pairs[i][1];
 
-        const leftTilt = -2 - Math.random()*4;
-        const rightTilt = 2 + Math.random()*4;
+       /* desktop tilt only using CSS classes */
 if(window.innerWidth > 768){
-    const leftTilt = -2 - Math.random()*4;
-    const rightTilt = 2 + Math.random()*4;
-
-    leftPhoto.style.transform =
-        `translateY(-50%) rotate(${leftTilt}deg)`;
-
-    rightPhoto.style.transform =
-        `translateY(-50%) rotate(${rightTilt}deg)`;
+    leftPhoto.style.removeProperty("transform");
+    rightPhoto.style.removeProperty("transform");
 }
 
         leftPhoto.style.opacity = "1";
@@ -208,5 +201,6 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
 
