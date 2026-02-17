@@ -113,7 +113,9 @@ h1, h2{
     width:34%;
     max-width:340px;
     height:60vh;
-    object-fit:cover;
+    object-fit: contain;
+background: rgba(0,0,0,0.25);
+
 
     position:absolute;
     top:50%;
@@ -624,3 +626,4 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
