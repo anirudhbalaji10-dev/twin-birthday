@@ -113,8 +113,9 @@ h1, h2{
     width:34%;
     max-width:340px;
     height:60vh;
-    object-fit: cover;
-    background: transparent;
+
+    object-fit: contain;      /* FULL image visible */
+    background: transparent;  /* remove black bars */
 
     position:absolute;
     top:50%;
@@ -127,8 +128,8 @@ h1, h2{
 
     opacity:0;
     transition:all 0.8s ease;
-    
 }
+
 .page-center{
     animation:endingZoom 6s ease forwards;
     animation:fadeIn 1.5s ease;
@@ -236,10 +237,10 @@ h1, h2{
 
         left:50% !important;
         transform:translateX(-50%);
-
-        object-fit:cover;
+        
+        object-fit: contain !important;
+        background: transparent !important;
         border-radius:20px;
-        background:none;
         opacity:0;
         transition:all .7s ease;
     }
@@ -651,6 +652,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
