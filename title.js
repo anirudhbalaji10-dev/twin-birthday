@@ -104,38 +104,43 @@ function createBurst(){
 
 /* ---------- CINEMATIC FLOW ---------- */
 
-window.onload = function(){
+window.addEventListener("load", ()=>{
 
-    /* word 1 */
+    setTimeout(()=>{
+
+        startShow();   // we move all animation inside this
+
+    },300);
+
+});
+function startShow(){
+
     setTimeout(()=>{
         t1.classList.add("active");
         showerAround(t1);
     },500);
 
-    /* word 2 */
     setTimeout(()=>{
         t2.classList.add("active");
         showerAround(t2);
     },1300);
 
-    /* word 3 */
     setTimeout(()=>{
         t3.classList.add("active");
         showerAround(t3);
     },2100);
 
-    /* rockets start AFTER text appears */
     setTimeout(()=>{
         setInterval(launchRocket,700);
     },2500);
 
-    /* final burst */
     setTimeout(()=>{
         createBurst();
     },4200);
 
-    /* move page */
     setTimeout(()=>{
         window.location.href="photos.html";
     },7500);
-};
+}
+
+
