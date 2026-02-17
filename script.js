@@ -159,19 +159,9 @@ function showPair(i){
         leftPhoto.style.opacity = "1";
         rightPhoto.style.opacity = "1";
 
-       if(window.innerWidth <= 768){
-
-    // MOBILE → stack top & bottom
-    leftPhoto.classList.remove("show-left","float");
-    rightPhoto.classList.remove("show-right","float");
-
-}
-else{
-
-    // LAPTOP → side by side
-    leftPhoto.classList.add("show-left","float");
-    rightPhoto.classList.add("show-right","float");
-}
+      /* ALWAYS add classes */
+leftPhoto.classList.add("show-left","float");
+rightPhoto.classList.add("show-right","float");
 
 
         /* START FOLLOW-STARS (1.5 sec) */
@@ -214,3 +204,4 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
