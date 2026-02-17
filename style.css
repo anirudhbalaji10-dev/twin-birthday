@@ -661,6 +661,19 @@ h1, h2{
   .show-left{ left: 3% !important; }
   .show-right{ right: 3% !important; }
 }
+/* ===== TITLE MOBILE FIX ===== */
+@media (max-width:768px){
+
+  .title-svg{
+    width:95%;
+  }
+
+  .birthday-text{
+    font-size:72px !important;
+    stroke-width:1.8;
+  }
+
+}
 
 
 
