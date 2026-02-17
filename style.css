@@ -221,37 +221,49 @@ background: rgba(0,0,0,0.25);
 @media (max-width:768px){
 
     .photo-container{
-        position:relative;
         height:78vh;
+        position:relative;
     }
 
     .photo{
-        position:absolute !important;   /* KEEP animation */
-        width:82vw !important;
-        max-width:none;
+        position:absolute !important;
+        width:88vw !important;
         height:34vh !important;
 
-        object-fit:contain;
-        background:#000;
-        background:rgba(255,255,255,0.03);
+        left:6% !important;
+        border-radius:18px;
 
-        top:auto !important;
-        transform:none !important;
+        object-fit:contain;   /* NO FACE CUT */
+        background:black;     /* removes ugly borders */
+
+        opacity:0;
+        transition:all .7s ease;
     }
 
-    /* ⭐ FINAL positions AFTER sliding */
-
+    /* TOP PHOTO */
     .show-left{
-        left:9% !important;
-        top:8% !important;
+        top:6%;
+        transform:translateX(0);
+        opacity:1;
     }
 
+    /* BOTTOM PHOTO */
     .show-right{
-        right:auto !important;
-        left:9% !important;
-        top:54% !important;
+        top:52%;
+        transform:translateX(0);
+        opacity:1;
+    }
+
+    /* START POSITIONS (hidden state) */
+    .left{
+        transform:translateX(-120%);
+    }
+
+    .right{
+        transform:translateX(120%);
     }
 }
+
 
 .final-stars{
     position:fixed;
@@ -629,6 +641,7 @@ background: rgba(0,0,0,0.25);
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
