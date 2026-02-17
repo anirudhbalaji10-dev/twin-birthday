@@ -149,12 +149,16 @@ function showPair(i){
 
         const leftTilt = -2 - Math.random()*4;
         const rightTilt = 2 + Math.random()*4;
+if(window.innerWidth > 768){
+    const leftTilt = -2 - Math.random()*4;
+    const rightTilt = 2 + Math.random()*4;
 
-        leftPhoto.style.transform =
-            `translateY(-50%) rotate(${leftTilt}deg)`;
+    leftPhoto.style.transform =
+        `translateY(-50%) rotate(${leftTilt}deg)`;
 
-        rightPhoto.style.transform =
-            `translateY(-50%) rotate(${rightTilt}deg)`;
+    rightPhoto.style.transform =
+        `translateY(-50%) rotate(${rightTilt}deg)`;
+}
 
         leftPhoto.style.opacity = "1";
         rightPhoto.style.opacity = "1";
@@ -204,4 +208,5 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
