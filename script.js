@@ -141,38 +141,32 @@ function showPair(i){
 
     leftPhoto.style.opacity = "0";
     rightPhoto.style.opacity = "0";
+setTimeout(()=>{
 
-    setTimeout(()=>{
+    leftPhoto.src = pairs[i][0];
+    rightPhoto.src = pairs[i][1];
 
-        leftPhoto.src = pairs[i][0];
-        rightPhoto.src = pairs[i][1];
+    /* RESET TRANSFORMS ALWAYS */
+    leftPhoto.style.transform = "";
+    rightPhoto.style.transform = "";
 
-       /* desktop tilt only using CSS classes */
-if(window.innerWidth > 768){
-    leftPhoto.style.removeProperty("transform");
-    rightPhoto.style.removeProperty("transform");
-}
+    leftPhoto.style.opacity = "1";
+    rightPhoto.style.opacity = "1";
 
-        leftPhoto.style.opacity = "1";
-        rightPhoto.style.opacity = "1";
+    /* ALWAYS add classes */
+    leftPhoto.classList.add("show-left","float");
+    rightPhoto.classList.add("show-right","float");
 
-      /* ALWAYS add classes */
-leftPhoto.classList.add("show-left","float");
-rightPhoto.classList.add("show-right","float");
+    /* FOLLOW STARS */
+    followStars = true;
 
+    clearTimeout(followTimeout);
 
-        /* START FOLLOW-STARS (1.5 sec) */
-followStars = true;
+    followTimeout = setTimeout(()=>{
+        followStars = false;
+    },1500);
 
-clearTimeout(followTimeout);
-
-followTimeout = setTimeout(()=>{
-    followStars = false;
-},1500);
-
-
-    },250);
-}
+},250);
 
 /* first pair */
 showPair(index);
@@ -201,6 +195,7 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
 
 
