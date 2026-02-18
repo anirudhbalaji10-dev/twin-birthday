@@ -147,9 +147,6 @@ setTimeout(()=>{
     rightPhoto.src = pairs[i][1];
 
     /* RESET TRANSFORMS ALWAYS */
-    leftPhoto.style.transform = "";
-    rightPhoto.style.transform = "";
-
     leftPhoto.style.opacity = "1";
     rightPhoto.style.opacity = "1";
 
@@ -195,6 +192,7 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
 
 
