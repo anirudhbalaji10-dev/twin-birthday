@@ -251,25 +251,24 @@ h1, h2{
 
     /* TOP photo (from left) */
     .show-left{
-        top:4% !important;
-        opacity:1;
-    }
+    top:4% !important;
+    opacity:1;
+    transform:translateX(-50%);
+}
 
-    /* BOTTOM photo (from right) */
-    .show-right{
-        top:52% !important;
-        opacity:1;
-    }
-
+.show-right{
+    top:52% !important;
+    opacity:1;
+    transform:translateX(-50%);
+}
     /* start positions — keeps same laptop animation idea */
     .left{
-        left:-120% !important;
-    }
+    transform:translateX(-180%);
+}
 
-    .right{
-        left:120% !important;
-    }
-
+.right{
+    transform:translateX(80%);
+}
     /* SAME floating effect on mobile */
     .float{
         animation:mobileFloat 4s ease-in-out infinite;
@@ -661,6 +660,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
