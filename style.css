@@ -232,32 +232,34 @@ h1, h2{
     }
 
     /* SAME photo style as laptop, just resized */
-    .photo{
-        position:absolute !important;
+     .photo{
+    position:absolute !important;
+    width:72vw !important;
+    height:32vh !important;
 
-        width:74vw !important;
-        height:32vh !important;
+    left:50% !important;
+    right:auto !important;   /* IMPORTANT FIX */
 
-        left:50% !important;
-        transform:translateX(-50%);
+    transform:translateX(-50%);
+    object-fit:contain !important;
 
-        object-fit:contain;
-        background:transparent;
-
-        border-radius:18px;
-        opacity:0;
-        transition:all .8s ease;
-    }
-
+    background:transparent !important;
+    border-radius:20px;
+    opacity:0;
+    transition:all .7s ease;
+}
     /* TOP photo (from left) */
-    .show-left{
-    top:4% !important;
+     .show-left{
+    top:5%;
+    left:50% !important;
+    right:auto !important;
     opacity:1;
     transform:translateX(-50%);
 }
-
-.show-right{
-    top:52% !important;
+      .show-right{
+    top:52%;
+    left:50% !important;
+    right:auto !important;
     opacity:1;
     transform:translateX(-50%);
 }
@@ -660,6 +662,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
