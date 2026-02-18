@@ -264,12 +264,12 @@ h1, h2{
     transform:translateX(-50%);
 }
     /* start positions — keeps same laptop animation idea */
-    .left{
-    transform:translateX(-180%);
+      .left{
+    transform:translateX(-50%) translateX(-120%);
 }
 
 .right{
-    transform:translateX(80%);
+    transform:translateX(-50%) translateX(120%);
 }
     /* SAME floating effect on mobile */
     .float{
@@ -662,6 +662,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
