@@ -167,7 +167,7 @@ setTimeout(()=>{
     },1500);
 
 },250);
-
+}
 /* first pair */
 showPair(index);
 
@@ -195,6 +195,7 @@ if(index >= pairs.length){
 
     showPair(index);
 });
+
 
 
 
