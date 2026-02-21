@@ -140,8 +140,8 @@ h1, h2{
 
 /* start position */
 .left  { left:-400px; }
-.right { left:100%; }
-/* visible position */
+.right { right:-400px; }
+
 .show-left{
     left:12%;
     opacity:1;
@@ -149,7 +149,7 @@ h1, h2{
 }
 
 .show-right{
-    left:54%;
+    right:12%;
     opacity:1;
     transform:translateY(-50%) scale(1) rotate(3deg);
 }
@@ -215,70 +215,59 @@ h1, h2{
 }
 
 /* ---------- MOBILE ---------- */
-@media (max-width:768px){
-
-    .photo-page{
-        padding-top:95px;
-    }
-
-    .photo-container{
-        position:relative;
-        width:100%;
-        height:74vh;
-        overflow:hidden;
-    }
-
-    /* SAME photo style as laptop, just resized */
-     .photo{
+.photo{
     position:absolute !important;
-    width:72vw !important;
-    height:32vh !important;
+    width:80vw !important;
+    height:34vh !important;
 
     left:50% !important;
     right:auto !important;
+
+    transform:none !important;
 
     object-fit:cover !important;
     border-radius:20px;
 
     opacity:0;
-    transition:opacity .6s ease, top .6s ease;
+    transition:all .6s ease;
 }
-    /* TOP photo (from left) */
-     .show-left{
+
+/* START positions (off-screen) */
+.left{
+    left:-120% !important;
+}
+.right{
+    left:120% !important;
+}
+
+/* Visible positions */
+.show-left{
     top:5%;
     left:50% !important;
-    transform:translateX(-50%);
+    transform:translateX(-50%) !important;
     opacity:1;
 }
 
 .show-right{
     top:52%;
     left:50% !important;
-    transform:translateX(-50%);
+    transform:translateX(-50%) !important;
     opacity:1;
 }
-    /* start positions — keeps same laptop animation idea */
-    .left{
-    left:-100% !important;
-}
-.right{
-    left:100% !important;
-}
-    /* SAME floating effect on mobile */
-    .float{
-        animation:mobileFloat 4s ease-in-out infinite;
-    }
 
-    @keyframes mobileFloat{
-        0%,100%{
-            transform:translateX(-50%) translateY(0);
-        }
-        50%{
-            transform:translateX(-50%) translateY(-10px);
-        }
-    }
+/* Floating */
+.photo.float{
+    animation:mobileFloat 4s ease-in-out infinite;
 }
 
+@keyframes mobileFloat{
+    0%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+    50%{
+        transform:translateX(-50%) translateY(-10px);
+    }
+}
 .final-stars{
     position:fixed;
     inset:0;
@@ -655,6 +644,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
