@@ -255,8 +255,14 @@ h1, h2{
 }
 
 /* Floating */
+/* STOP desktop float on mobile */
+.scene-float .photo{
+    animation:none !important;
+}
+
+/* MOBILE FLOAT */
 .photo.float{
-    animation:mobileFloat 4s ease-in-out infinite;
+    animation:mobileFloat 4s ease-in-out infinite !important;
 }
 
 @keyframes mobileFloat{
@@ -643,3 +649,4 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
