@@ -139,9 +139,8 @@ h1, h2{
 }
 
 /* start position */
-.left{ left:-400px; }
-.right{ right:-400px; }
-
+.left  { left:-400px; }
+.right { left:100%; }
 /* visible position */
 .show-left{
     left:12%;
@@ -150,7 +149,7 @@ h1, h2{
 }
 
 .show-right{
-    right:12%;
+    left:54%;
     opacity:1;
     transform:translateY(-50%) scale(1) rotate(3deg);
 }
@@ -660,6 +659,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
