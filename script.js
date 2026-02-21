@@ -148,12 +148,19 @@ setTimeout(()=>{
 
     /* RESET TRANSFORMS ALWAYS */
     leftPhoto.style.opacity = "1";
-    rightPhoto.style.opacity = "1";
+rightPhoto.style.opacity = "1";
 
-    /* ALWAYS add classes */
-    leftPhoto.classList.add("show-left","float");
-    rightPhoto.classList.add("show-right","float");
+/* remove first */
+leftPhoto.classList.remove("show-left","float");
+rightPhoto.classList.remove("show-right","float");
 
+/* force reflow so animation restarts */
+void leftPhoto.offsetWidth;
+void rightPhoto.offsetWidth;
+
+/* add again */
+leftPhoto.classList.add("show-left","float");
+rightPhoto.classList.add("show-right","float");
     /* FOLLOW STARS */
     followStars = true;
 
@@ -192,9 +199,3 @@ if(index >= pairs.length){
 
     showPair(index);
 });
-
-
-
-
-
-
