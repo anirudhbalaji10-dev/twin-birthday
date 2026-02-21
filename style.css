@@ -257,15 +257,15 @@ h1, h2{
 /* Floating */
 /* MOBILE FLOAT */
 .photo.float{
-    animation:mobileFloat 4s ease-in-out infinite !important;
+    animation: mobileFloat 4s ease-in-out infinite !important;
 }
 
 @keyframes mobileFloat{
     0%,100%{
-        transform:translateX(-50%) translateY(0);
+        transform: translateX(-50%) translateY(0);
     }
     50%{
-        transform:translateX(-50%) translateY(-12px);
+        transform: translateX(-50%) translateY(-15px);
     }
 }
 .final-stars{
@@ -644,5 +644,6 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
