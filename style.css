@@ -154,14 +154,6 @@ h1, h2{
 }
 
 /* floating */
-.float{
-    animation:floatPhoto 4s ease-in-out infinite;
-}
-
-@keyframes floatPhoto{
-    0%,100%{ transform:translateY(-50%) scale(1); }
-    50%{ transform:translateY(-53%) scale(1.02); }
-}
 
 /* flash */
 .flash{
@@ -214,6 +206,12 @@ h1, h2{
 }
 
 /* ---------- MOBILE ---------- */
+.photo-container{
+    height:auto !important;
+    min-height:83vh;
+    overflow:visible !important;
+}
+
 .photo{
 position:absolute !important;
 width:80vw !important;
@@ -221,8 +219,6 @@ height:34vh !important;
 
 left:50% !important;
 right:auto !important;
-
-transform: translateX(-50%) !important;
 
 object-fit:cover !important;
 border-radius:20px;
@@ -243,31 +239,19 @@ transition:all .6s ease;
 .show-left{
     top:5%;
     left:50% !important;
-    transform:translateX(-50%) !important;
+    transform:translateX(-50%) ;
     opacity:1;
 }
 
 .show-right{
-    top:52%;
+    top: 55%;
     left:50% !important;
-    transform:translateX(-50%) !important;
+    transform:translateX(-50%);
     opacity:1;
 }
-
 /* Floating */
 /* MOBILE FLOAT */
-.photo.float{
-    animation: mobileFloat 4s ease-in-out infinite !important;
-}
 
-@keyframes mobileFloat{
-    0%,100%{
-        transform: translateX(-50%) translateY(0);
-    }
-    50%{
-        transform: translateX(-50%) translateY(-15px);
-    }
-}
 .final-stars{
     position:fixed;
     inset:0;
@@ -569,8 +553,12 @@ transition:all .6s ease;
 }
 
 @keyframes dreamFloat{
-    from{transform:translateY(-50%) rotate(-2deg);}
-    to{transform:translateY(-56%) rotate(2deg);}
+    from{
+        transform: translateX(-50%) translateY(-50%) rotate(-2deg);
+    }
+    to{
+        transform: translateX(-50%) translateY(-56%) rotate(2deg);
+    }
 }
 /*4*/
 .scene-final .photo{
@@ -608,6 +596,18 @@ transition:all .6s ease;
 
     animation:magicTwinkle 1.4s ease forwards;
 }
+.photo.float{
+    animation: floatPhoto 3s ease-in-out infinite;
+}
+
+@keyframes floatPhoto{
+    0%,100%{
+        transform: translateX(-50%) translateY(0px) scale(1) rotate(-3deg);
+    }
+    50%{
+        transform: translateX(-50%) translateY(-15px) scale(1) rotate(3deg);
+    }
+}
 
 @keyframes magicTwinkle{
     0%{
@@ -644,7 +644,3 @@ transition:all .6s ease;
     #t3{ transform:translateY(35px); }
 
 }
-
-
-
-
