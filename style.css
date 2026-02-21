@@ -99,7 +99,7 @@ h1, h2{
     align-items:center;
     text-align:center;
 
-    padding-top:70px;   /* space for heading */
+    padding-top:55px;   /* space for heading */
 }
 
 .photo-container{
@@ -237,14 +237,14 @@ transition:all .6s ease;
 
 /* Visible positions */
 .show-left{
-    top:5%;
+    top:3%;
     left:50% !important;
     transform:translateX(-50%) ;
     opacity:1;
 }
 
 .show-right{
-    top: 50%;
+    top: 45%;
     left:50% !important;
     transform:translateX(-50%);
     opacity:1;
