@@ -113,10 +113,8 @@ h1, h2{
     width:34%;
     max-width:340px;
     height:60vh;
-
-    object-fit: contain;      /* FULL image visible */
-    background: transparent;  /* remove black bars */
-
+    object-fit: cover;
+    background: none;
     position:absolute;
     top:50%;
     transform:translateY(-50%) scale(0.9);
@@ -241,8 +239,8 @@ h1, h2{
     right:auto !important;   /* IMPORTANT FIX */
 
     transform:translateX(-50%);
-    object-fit:contain !important;
-
+    object-fit:cover !important;
+         
     background:transparent !important;
     border-radius:20px;
     opacity:0;
@@ -662,6 +660,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
