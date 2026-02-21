@@ -215,22 +215,22 @@ h1, h2{
 
 /* ---------- MOBILE ---------- */
 .photo{
-    position:absolute !important;
-    width:80vw !important;
-    height:34vh !important;
+position:absolute !important;
+width:80vw !important;
+height:34vh !important;
 
-    left:50% !important;
-    right:auto !important;
+left:50% !important;
+right:auto !important;
 
-    transform:none !important;
+transform: translateX(-50%) !important;
 
-    object-fit:cover !important;
-    border-radius:20px;
+object-fit:cover !important;
+border-radius:20px;
 
-    opacity:0;
-    transition:all .6s ease;
+opacity:0;
+transition:all .6s ease;
+
 }
-
 /* START positions (off-screen) */
 .left{
     left:-120% !important;
@@ -644,6 +644,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
