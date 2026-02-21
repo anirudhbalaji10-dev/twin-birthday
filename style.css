@@ -235,38 +235,34 @@ h1, h2{
     height:32vh !important;
 
     left:50% !important;
-    right:auto !important;   /* IMPORTANT FIX */
+    right:auto !important;
 
-    transform:translateX(-50%);
     object-fit:cover !important;
-         
-    background:transparent !important;
     border-radius:20px;
+
     opacity:0;
-    transition:all .7s ease;
+    transition:opacity .6s ease, top .6s ease;
 }
     /* TOP photo (from left) */
      .show-left{
     top:5%;
     left:50% !important;
-    right:auto !important;
-    opacity:1;
     transform:translateX(-50%);
-}
-      .show-right{
-    top:52%;
-    left:50% !important;
-    right:auto !important;
     opacity:1;
-    transform:translateX(-50%);
-}
-    /* start positions — keeps same laptop animation idea */
-      .left{
-    transform:translateX(-50%) translateX(-120%);
 }
 
+.show-right{
+    top:52%;
+    left:50% !important;
+    transform:translateX(-50%);
+    opacity:1;
+}
+    /* start positions — keeps same laptop animation idea */
+    .left{
+    left:-100% !important;
+}
 .right{
-    transform:translateX(-50%) translateX(120%);
+    left:100% !important;
 }
     /* SAME floating effect on mobile */
     .float{
@@ -659,6 +655,7 @@ h1, h2{
     #t3{ transform:translateY(35px); }
 
 }
+
 
 
 
