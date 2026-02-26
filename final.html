@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<audio id="bgMusic" src="music.mp3" loop></audio>
 <div class="page-center">
 
     <p class="small-line">The End of the Journey</p>
@@ -98,6 +98,18 @@ document.body.addEventListener("click", ()=>{
     }
 });
 </script>
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicStarted") === "true"){
+        music.play().catch(()=>{});
+    }
+
+});
+</script>
 </body>
 
 </html>
+
