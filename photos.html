@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 <div id="starLayer"></div>
 <div class="photo-page">
     <h2>Tap anywhere to reveal memories ✨</h2>
@@ -29,7 +30,19 @@
 <div id="pauseScreen" class="pause-screen">
     Every memory tells a story ✨
 </div>
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicStarted") === "true"){
+        music.play().catch(()=>{});
+    }
+
+});
+</script>
 </body>
 </html>
+
 
 
