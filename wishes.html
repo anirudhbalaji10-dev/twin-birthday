@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<audio id="bgMusic" src="music.mp3" loop></audio>
 <div class="page-center">
 
     <p class="small-line">A message from the heart</p>
@@ -29,6 +29,17 @@
     <a href="final.html" class="portal-btn">Final Surprise</a>
 
 </div>
+<script>
+const music = document.getElementById("bgMusic");
 
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicStarted") === "true"){
+        music.play().catch(()=>{});
+    }
+
+});
+</script>
 </body>
 </html>
+
