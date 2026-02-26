@@ -20,24 +20,48 @@
     <button id="enterBtn" class="portal-btn">Enter</button>
 </div>
 <script>
-const music = document.getElementById("bgMusic");
 const enterBtn = document.getElementById("enterBtn");
+const music = document.getElementById("bgMusic");
 
 enterBtn.addEventListener("click", () => {
+
+    localStorage.setItem("musicStarted", "true");
+    localStorage.setItem("musicTime", 0);
 
     music.currentTime = 0;
 
     music.play().then(() => {
-
-        localStorage.setItem("musicStarted", "true");
-
         window.location.href = "title.html";
-
     });
 
 });
 </script>
+<script>
+const music = document.getElementById("bgMusic");
+
+// Restore music time
+window.addEventListener("load", () => {
+
+    const started = localStorage.getItem("musicStarted");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (started === "true") {
+
+        if (savedTime) {
+            music.currentTime = parseFloat(savedTime);
+        }
+
+        music.play().catch(()=>{});
+    }
+});
+
+// Save current time before leaving page
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("musicTime", music.currentTime);
+});
+</script>
 </body>
 </html>
+
 
 
