@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<audio id="bgMusic" src="music.mp3" loop></audio>
 <div class="title-screen">
 <svg viewBox="0 0 1000 420" class="title-svg">
 <text id="t1" class="birthday-text" x="50%" y="110" text-anchor="middle">Happy</text>
@@ -25,8 +25,20 @@
 </div>
 
 <script src="title.js"></script>
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicStarted") === "true"){
+        music.play().catch(()=>{});
+    }
+
+});
+</script>
 </body>
 </html>
+
 
 
 
