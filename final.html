@@ -101,15 +101,29 @@ document.body.addEventListener("click", ()=>{
 <script>
 const music = document.getElementById("bgMusic");
 
+// Restore music time
 window.addEventListener("load", () => {
 
-    if(localStorage.getItem("musicStarted") === "true"){
+    const started = localStorage.getItem("musicStarted");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (started === "true") {
+
+        if (savedTime) {
+            music.currentTime = parseFloat(savedTime);
+        }
+
         music.play().catch(()=>{});
     }
+});
 
+// Save current time before leaving page
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("musicTime", music.currentTime);
 });
 </script>
 </body>
 
 </html>
+
 
