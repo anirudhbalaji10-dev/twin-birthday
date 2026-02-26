@@ -12,12 +12,31 @@
 
 </head>
 <body>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 <div id="particles"></div>
 <div class="page-center">
     <p class="small-line">A moment made just for you</p>
     <h1>Two Stars. One Special Day ✨</h1>
     <a href="title.html" class="portal-btn">Enter</a>
 </div>
+<script>
+const music = document.getElementById("bgMusic");
+const enterBtn = document.getElementById("enterBtn");
 
+enterBtn.addEventListener("click", () => {
+
+    music.currentTime = 0;
+
+    music.play().then(() => {
+
+        localStorage.setItem("musicStarted", "true");
+
+        window.location.href = "title.html";
+
+    });
+
+});
+</script>
 </body>
 </html>
+
